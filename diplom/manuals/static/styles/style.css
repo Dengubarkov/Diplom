@@ -11,7 +11,7 @@ html, .main {
 	margin:0;
 }
 .main {
-	background:#f3f1f1 url(static/images/header_bg.jpg) repeat-x center 11px;
+	background:#f3f1f1 url(/static/images/header_bg.jpg) repeat-x center 11px;
 }
 .clr {
 	clear:both;
@@ -64,7 +64,7 @@ p.spec {
 	padding:14px 22px;
 	text-align:left;
 	border-top:1px solid #dfdede;
-	background:url(static/images/spec_bg.gif) repeat-x center top;
+	background:url(/static/images/spec_bg.gif) repeat-x center top;
 }
 a {
 	color:#5db166;
@@ -340,7 +340,7 @@ ol li .send {
 	margin:6px 0;
 	padding:0;
 	float:left;
-	background:#fff url(static/images/search.gif) no-repeat top left;
+	background:#fff url(/static/images/search.gif) no-repeat top left;
 }
 #formsearch input.editbox_search {
 	margin:0;
