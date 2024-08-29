@@ -3,22 +3,30 @@
 
 
 <!-- START PAGE SOURCE -->
+
 <div class="main">
   <div class="header">
-    <div class="header_resize">
-      <div class="menu_nav">
-        <ul>
-          <li ><a href="{%url 'home'%}">Главная</a></li>
+
+    <div class="header_resize" >
+      <div class="menu_nav" >
+        <ul >
+          <li><a href="{%url 'home'%}">Главная</a></li>
           <li><a href="support.html">Инструкции</a></li>
-          <li><a href="about.html">Авторы</a></li>
+          <li><a href="{%url 'authors'%}">Авторы</a></li>
 
           <li><a href="contact.html">Сообщения</a></li>
           <li><a href="blog.html">Выйти</a></li>
+          <li >
+        </li>
         </ul>
+
       </div>
+
       <div class="logo">
-        <h1><a href="{%url 'home'%}">База<span> знаний IT</span></a> <small>Доступные инструкции уже здесь</small></h1>
-      </div>
-      <div class="clr"></div>
+
+        <h1><a href="{%url 'home'%}">База<span> знаний IT</span></a> <small style="font-size:14px; font-weight:bold;">Раздел: {{title}}</small></h1></div>
+
+      <div class="clr"> </div>
     </div>
+
   </div>

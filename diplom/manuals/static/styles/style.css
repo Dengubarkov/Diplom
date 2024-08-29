@@ -92,11 +92,11 @@ a.com span {
 .header_resize {
 	margin:0 auto;
 	padding:0;
-	width:974px;
+	width:70%;
 }
 .menu_nav {
 	margin:0;
-	padding:52px 40px 0 0;
+	padding:52px 0px 0 0;
 	float:right;
 	height:29px;
 }
@@ -112,24 +112,25 @@ a.com span {
 .menu_nav ul li a {
 	display:block;
 	margin:0;
-	padding:4px 20px;
-	color:#fff;
+	padding:4px 10px;
+	color:#FFF;
 	text-decoration:none;
-	font-size:12px;
+	font-size:16px;
+	font-weight: bold
 }
 .menu_nav ul li.active a, .menu_nav ul li a:hover {
 	background-color:#68ca74;
 }
 .content_resize {
 	margin:0 auto;
-	padding:16px 0 24px;
-	width:970px;
+	padding:56px 110px 124px 200px;
+	width:60%;
 }
 .content .mainbar {
 	margin:0;
 	padding:0;
 	float:left;
-	width:670px;
+	width:80%;
 }
 .content .mainbar img {
 	border:1px solid #d8dbdc;
@@ -329,23 +330,24 @@ ol li .send {
 }
 .searchform {
 	float:right;
+
 }
 #formsearch {
 	margin:0;
 	height:36px;
-	padding:10px 28px 40px 0;
+	padding:10px 30% 0px 22%;
 }
 #formsearch span {
 	display:block;
-	margin:6px 0;
-	padding:0;
-	float:left;
+	margin:0px 0px;
+	padding:0 10px;
+
 	background:#fff url(/static/images/search.gif) no-repeat top left;
 }
 #formsearch input.editbox_search {
 	margin:0;
 	padding:11px 6px 10px;
-	float:left;
+	float:center;
 	width:181px;
 	border:none;
 	background:none;
@@ -356,5 +358,5 @@ ol li .send {
 	margin:6px 0 0 0;
 	padding:0;
 	border:none;
-	float:left;
+	float:right;
 }
