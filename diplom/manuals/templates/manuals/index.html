@@ -4,31 +4,31 @@
 
 
 
-        <div >
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Введите текст..." type="text"  style="width:1000px"/>
-</span>
-            <input name="button_search" src="{% static 'images/search_btn.gif'%}" class="button_search" type="image" />
-          </form>
 
-
-      </div>
       {%if manuals%}
 <div class="content"  >
+<div class="searchform" >
+          <form id="formsearch" name="formsearch" method="post" action="#">
+            <span>
+            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" placeholder="Введите текст..." type="text" />
+            </span>
+            <input name="button_search" src="{% static 'images/search_btn.gif'%}" class="button_search" type="image" />
+          </form>
+        </div>
+
 
 
     <div class="content_resize" >
       <div class="mainbar" >
         {%for manual in manuals%}
         <div class="article" >
-          <img src="{{manual.logo.url}}" style=" border: 10px; margin: 5px; padding: 5px; border-radius: 20px;width: 10%" alt="" />
-          <h2><span>{{manual.title}}</span></h2>
+            <a href="{%url 'manual' manual.id%}"><img src="{{manual.logo.url}}" style=" border: 10px; margin: 5px; padding: 5px; border-radius: 20px;width: 10%" alt="" /></a>
+          <h2><span><a href="{%url 'manual' manual.id%}">{{manual.title}}</a></span></h2>
           <div class="clr"></div>
           <p><span class="date">{{manual.created}}</span> Posted by <a href="#">{{manual.owner.name}}</a> </p>
 
           <p>{{manual.description|slice:'200'}}...</p>
-          <p class="spec"><a href="#" class="rm">Read more &raquo;</a> <a href="#" class="com"><span>11</span> Comments</a></p>
+          <p class="spec"><a href="{%url 'manual' manual.id%}">Читать далее &raquo;</a> <a href="#" class="com"><span>11</span> Comments</a></p>
 </div>
         {%endfor%}
 {%else%}
@@ -36,52 +36,16 @@
         <div class="article">
 <h3 style="text-align: center">Ваша инструкция может быть первой в нашей базе знаний</h3></div>
 {%endif%}
+
         <p class="pages"><small>Page 1 of 2 &nbsp;&nbsp;&nbsp;</small> <span>1</span> <a href="#">2</a> <a href="#">&raquo;</a></p>
       </div>
 
-      <div class="sidebar" style="margin: -15px 0 ">
-        <div class="searchform" >
-          <form id="formsearch" name="formsearch" method="post" action="#">
-            <span>
-            <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Введите текст..." type="text" />
-            </span>
-            <input name="button_search" src="{% static 'images/search_btn.gif'%}" class="button_search" type="image" />
-          </form>
-        </div>
 
-      </div>
       <div class="clr"></div>
     </div>
   </div>
 
-  <div class="fbg">
-    <div class="fbg_resize">
-      <div class="col c1">
-        <h2><span>Image Gallery</span></h2>
-        <a href="#"><img src="{% static 'images/pix1.jpg'%}" width="58" height="58" alt="" /></a> <a href="#"><img src="images/pix2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="{% static 'images/pix3.jpg'%}" width="58" height="58" alt="" /></a> <a href="#"><img src="{% static 'images/pix4.jpg'%}" width="58" height="58" alt="" /></a> <a href="#"><img src="{% static 'images/pix5.jpg'%}" width="58" height="58" alt="" /></a> <a href="#"><img src="{% static 'images/pix6.jpg'%}" width="58" height="58" alt="" /></a> </div>
-      <div class="col c2">
-        <h2><span>Lorem Ipsum</span></h2>
-        <p>Lorem ipsum dolor<br />
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
-      </div>
-      <div class="col c3">
-        <h2><span>Contact</span></h2>
-        <p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue.</p>
-        <p><a href="#">support@yoursite.com</a></p>
-        <p>+1 (123) 444-5677<br />
-          +1 (123) 444-5678</p>
-        <p>Address: 123 TemplateAccess Rd1</p>
-      </div>
-      <div class="clr"></div>
-    </div>
-  </div>
-  <div class="footer">
-    <div class="footer_resize">
-      <p class="lf">Copyright &copy; 2010 <a href="#">SiteName</a> - All Rights Reserved</p>
-      <p class="rf"><a href="http://www.free-css.com/">Free CSS Templates</a> by <a href="http://www.coolwebtemplates.net/">Cool Website Templates</a></p>
-      <div class="clr"></div>
-    </div>
-  </div>
-</div>
+
+
 <!-- END PAGE SOURCE -->
 {%endblock%}

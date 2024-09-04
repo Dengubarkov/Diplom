@@ -1,0 +1,22 @@
+{%extends 'manuals/base.html'%}
+{% load static%}
+{%block content%}
+<p class="manual"><a href="javascript:history.back()"><<Назад</a></p>
+  <div class="content">
+<h2 class="spec">{{manual.title}}</h2>
+    <div class="content_resize">
+
+
+      <img src="{{manual.logo.url}}" alt="{{manual.title}}" class="img_manual">
+      <h5 class="manual">Дата добавления: {{manual.created}}</h5>
+        <h3>Описание</h3>
+     <p class="text_manual"><i>{{manual.description}}</i></p>
+        <h3>Инструкция:</h3>
+      <p class="text_manual">{{manual.text}}</p>
+         {% if manual.files%}
+      <p class="text_manual"><a href="{{manual.files.url}}" target="_blank">Вложение</a></p>
+        {%endif%}
+       </div>
+</div>
+<!-- END PAGE SOURCE -->
+{%endblock%}

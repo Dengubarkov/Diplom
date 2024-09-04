@@ -24,7 +24,7 @@
 
       <div class="logo">
 
-        <h1><a href="{%url 'home'%}">База<span> знаний IT</span></a> <small style="font-size:14px; font-weight:bold;">Раздел: {{title}}</small></h1></div>
+        <h1><a href="{%url 'home'%}">База<span> знаний IT</span></a> {%if title%}<small style="font-size:14px; font-weight:bold;">Раздел: {{title}}</small>{%endif%}</h1></div>
 
       <div class="clr"> </div>
     </div>

@@ -14,3 +14,8 @@ def authors(request):
     manuals = Manuals.objects.all()
     context = {'authors':authors, 'manuals':manuals,'title':title}
     return render(request, 'manuals/authors.html', context)
+
+def manual(request,pk):
+    manual = Manuals.objects.get(id=pk)
+    context = {'manual':manual}
+    return render(request, 'manuals/manual.html',context)
